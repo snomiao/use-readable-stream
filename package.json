@@ -1,0 +1,46 @@
+{
+  "name": "use-readable-stream",
+  "version": "0.0.0",
+  "homepage": "https://github.com/snomiao/use-readable-stream#readme",
+  "license": "MIT",
+  "author": "snomiao <snomiao@gmail.com>",
+  "files": [
+    "*.ts",
+    "dist"
+  ],
+  "repository": "https://github.com/snomiao/use-readable-stream",
+  "scripts": {
+    "build": "bun build index.ts --outdir=dist && bun build:umd",
+    "build:umd": "bunx rollup dist/index.js --file dist/index.umd.js --format umd --name \"main\"",
+    "prerelease": "bun run build && bun run test",
+    "release": "bunx standard-version && git push --follow-tags && npm publish",
+    "test": "bun test",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.20",
+    "@types/jest": "^30.0.0",
+    "husky": "^9.1.7",
+    "semantic-release": "^24.2.7"
+  },
+  "peerDependencies": {
+    "typescript": "^5.9.2"
+  },
+  "private": false,
+  "type": "module",
+  "exports": {
+    "import": "./dist/index.js",
+    "types": "./index.ts"
+  },
+  "module": "index.ts",
+  "types": "./index.ts",
+  "dependencies": {
+    "@testing-library/jest-dom": "^6.6.4",
+    "@testing-library/react": "^16.3.0",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
+    "happy-dom": "^18.0.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  }
+}
