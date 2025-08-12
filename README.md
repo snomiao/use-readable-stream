@@ -99,6 +99,10 @@ bun run build
 cd examples && bun server.ts
 ```
 
+## About
+
+Originally made for Comfy-PR project.
+
 ## License
 
 MIT
