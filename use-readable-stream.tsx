@@ -1,4 +1,3 @@
-import { value } from "happy-dom/lib/PropertySymbol.js";
 import { useState, useEffect, useRef } from "react";
 
 export interface StreamState<T> {
